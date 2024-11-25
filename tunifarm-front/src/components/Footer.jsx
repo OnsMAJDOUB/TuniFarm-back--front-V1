@@ -1,82 +1,90 @@
+// src/components/Footer.js
 import React from "react";
-import {
-  GlobeAltIcon,
-  EnvelopeIcon,
-  PhoneIcon,
-} from "@heroicons/react/24/outline";
+import { Link } from "react-router-dom";
+import "./Footer.css"; // The CSS file for styling
 
 const Footer = () => {
   return (
-    <footer className="bg-gray-900 text-white">
-      <div className="max-w-7xl mx-auto px-4 py-8 md:flex md:justify-between md:items-center">
-        {/* Logo and Description */}
-        <div>
-          <h2 className="text-2xl font-bold">TuniFarm</h2>
-          <p className="mt-2 text-gray-400">
-            Connecting local farmers with communities for fresh, organic, and
-            sustainable produce.
-          </p>
-        </div>
+    <footer className="footer">
+      <div className="footer-container">
+        <div className="footer-links">
+          <div className="footer-section">
+            <h4>About Us</h4>
+            <ul>
+              <li>
+                <Link to="/about">Who We Are</Link>
+              </li>
+              <li>
+                <Link to="/contact">Contact</Link>
+              </li>
+              <li>
+                <Link to="/shop">Shop Now</Link>
+              </li>
+            </ul>
+          </div>
 
-        {/* Links */}
-        <div className="mt-6 md:mt-0">
-          <h3 className="text-lg font-semibold">Quick Links</h3>
-          <ul className="mt-2 space-y-2 text-gray-400">
-            <li>
-              <span className="hover:text-gray-200 cursor-pointer">
-                About Us
-              </span>
-            </li>
-            <li>
-              <span className="hover:text-gray-200 cursor-pointer">
-                Our Services
-              </span>
-            </li>
-            <li>
-              <span className="hover:text-gray-200 cursor-pointer">
-                Contact Us
-              </span>
-            </li>
-          </ul>
-        </div>
+          <div className="footer-section">
+            <h4>Quick Links</h4>
+            <ul>
+              <li>
+                <Link to="/login">Login</Link>
+              </li>
+              <li>
+                <Link to="/regiter">Register Now</Link>
+              </li>
+            </ul>
+          </div>
 
-        {/* Contact Information */}
-        <div className="mt-6 md:mt-0">
-          <h3 className="text-lg font-semibold">Contact Us</h3>
-          <div className="mt-2 space-y-2">
-            <p className="flex items-center text-gray-400">
-              <PhoneIcon className="w-5 h-5 mr-2 text-gray-400" />
-              +216 123 456 789
+          <div className="footer-section">
+            <h4>Follow Us</h4>
+            <ul className="social-icons">
+              <li>
+                <Link
+                  to="https://facebook.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Facebook
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="https://twitter.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Twitter
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="https://instagram.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Instagram
+                </Link>
+              </li>
+            </ul>
+          </div>
+
+          <div className="footer-section">
+            <h4>Newsletter</h4>
+            <p>
+              Sign up for our newsletter to get the latest news and updates.
             </p>
-            <p className="flex items-center text-gray-400">
-              <EnvelopeIcon className="w-5 h-5 mr-2 text-gray-400" />
-              contact@tunifarm.com
-            </p>
-            <p className="flex items-center text-gray-400">
-              <GlobeAltIcon className="w-5 h-5 mr-2 text-gray-400" />
-              www.tunifarm.com
-            </p>
+            <form>
+              <input type="email" placeholder="Enter your email" required />
+              <button type="submit">Subscribe</button>
+            </form>
           </div>
         </div>
-      </div>
 
-      {/* Footer Bottom */}
-      <div className="border-t border-gray-700 mt-8 py-4">
-        <div className="max-w-7xl mx-auto px-4 flex flex-col md:flex-row justify-between items-center">
-          <p className="text-gray-400">
-            &copy; {new Date().getFullYear()} TuniFarm. All Rights Reserved.
+        <div className="footer-bottom">
+          <p>
+            &copy; {new Date().getFullYear()} TuniFarm. All rights reserved.
           </p>
-          <div className="flex space-x-4 mt-4 md:mt-0">
-            <span className="text-gray-400 hover:text-gray-200 cursor-pointer">
-              <GlobeAltIcon className="w-5 h-5" />
-            </span>
-            <span className="text-gray-400 hover:text-gray-200 cursor-pointer">
-              <EnvelopeIcon className="w-5 h-5" />
-            </span>
-            <span className="text-gray-400 hover:text-gray-200 cursor-pointer">
-              <PhoneIcon className="w-5 h-5" />
-            </span>
-          </div>
+          <p>Powered by TuniFarm</p>
         </div>
       </div>
     </footer>

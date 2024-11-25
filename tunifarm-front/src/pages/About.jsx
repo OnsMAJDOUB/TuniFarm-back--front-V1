@@ -1,63 +1,66 @@
+// src/pages/About.js
 import React from "react";
-import { CheckCircleIcon } from "@heroicons/react/outline";
+import "./About.css"; // Ensure you add the related CSS styles
 
 const About = () => {
   return (
-    <div className="bg-gray-50 min-h-screen px-6 py-10">
-      <div className="max-w-4xl mx-auto">
-        <h1 className="text-4xl font-extrabold text-green-600 mb-6 text-center">
-          About Us
-        </h1>
-        <p className="text-lg text-gray-700 mb-8 text-center">
-          At <span className="font-bold text-green-700">TuniFarm</span>, we aim
-          to connect local farmers with consumers to provide fresh, organic, and
-          sustainable products. Join our mission to support local communities
-          and embrace healthier lifestyles.
-        </p>
+    <div className="about-container">
+      <header className="about-header">
+        <h1>À propos de TuniFarm</h1>
+        <p>Votre marché local en ligne</p>
+      </header>
 
-        <div className="space-y-8">
-          {/* Mission Section */}
-          <div className="bg-white shadow-lg rounded-lg p-6">
-            <h2 className="text-2xl font-bold text-green-600 flex items-center gap-2 mb-4">
-              <CheckCircleIcon className="h-6 w-6 text-green-500" />
-              Our Mission
-            </h2>
-            <p className="text-gray-700">
-              Our mission is to empower local farmers, reduce food waste, and
-              foster sustainable agricultural practices. By connecting farmers
-              directly to consumers, we ensure freshness, transparency, and fair
-              trade.
-            </p>
-          </div>
-
-          {/* Why Choose Us Section */}
-          <div className="bg-white shadow-lg rounded-lg p-6">
-            <h2 className="text-2xl font-bold text-green-600 flex items-center gap-2 mb-4">
-              <CheckCircleIcon className="h-6 w-6 text-green-500" />
-              Why Choose Us?
-            </h2>
-            <p className="text-gray-700">
-              We stand out by offering the freshest products sourced directly
-              from local farmers. With a focus on sustainability, quality, and
-              building strong community ties, we provide a shopping experience
-              you can trust.
-            </p>
-          </div>
-
-          {/* Our Values Section */}
-          <div className="bg-white shadow-lg rounded-lg p-6">
-            <h2 className="text-2xl font-bold text-green-600 flex items-center gap-2 mb-4">
-              <CheckCircleIcon className="h-6 w-6 text-green-500" />
-              Our Values
-            </h2>
-            <ul className="list-disc list-inside text-gray-700 space-y-2">
-              <li>Supporting local farmers and small businesses.</li>
-              <li>Encouraging sustainable and eco-friendly practices.</li>
-              <li>Building trust and transparency with our customers.</li>
-            </ul>
-          </div>
+      <section className="about-content">
+        <div className="about-text">
+          <h2>Notre Mission</h2>
+          <p>
+            TuniFarm est une plateforme qui vise à rapprocher les producteurs
+            agricoles locaux de Tunisie et les consommateurs. Nous croyons que
+            l’achat direct de produits frais et locaux aide à soutenir
+            l’économie locale, tout en garantissant une meilleure qualité pour
+            les consommateurs. Découvrez des fruits, légumes, miel, produits
+            laitiers et bien plus encore, directement issus des fermes
+            tunisiennes.
+          </p>
         </div>
-      </div>
+
+        <div className="about-text">
+          <h2>Notre Vision</h2>
+          <p>
+            Notre vision est de devenir la principale plateforme en ligne
+            facilitant l'achat de produits locaux en Tunisie. Nous rêvons d'un
+            avenir où chaque famille pourra acheter directement ses produits de
+            ferme, soutenir les producteurs locaux et manger de manière plus
+            saine et responsable.
+          </p>
+        </div>
+
+        <div className="about-text">
+          <h2>Nos Valeurs</h2>
+          <ul>
+            <li>
+              <strong>Authenticité :</strong> Offrir des produits frais et de
+              qualité provenant directement des fermes.
+            </li>
+            <li>
+              <strong>Proximité :</strong> Renforcer les liens entre producteurs
+              locaux et consommateurs.
+            </li>
+            <li>
+              <strong>Durabilité :</strong> Favoriser des pratiques agricoles
+              respectueuses de l'environnement.
+            </li>
+            <li>
+              <strong>Équité :</strong> Assurer un prix juste pour les
+              producteurs et les consommateurs.
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <footer className="about-footer">
+        <p>&copy; {new Date().getFullYear()} TuniFarm. Tous droits réservés.</p>
+      </footer>
     </div>
   );
 };
